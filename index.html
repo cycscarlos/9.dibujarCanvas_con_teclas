@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="https://carlos-colmenares-a.netlify.app" />
+
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="assets/css/styleGral.css" />
+
+    <script src="https://use.fontawesome.com/698a367122.js"></script>
+    <title>Platzi | Javascript Learning</title>
+  </head>
+  <body>
+    <!--: Header & Menu Navigation -->
+    <header>
+      <div class="Grid-container">
+        <div class="profile">
+          <a href="#" class="logo">
+            <img
+              width="96"
+              height="72"
+              src="assets/img/logoFoto.JPG"
+              alt="Software Developer"
+            />
+
+            <div class="logotext">
+              zCoder!<br /><span>...on Social Media</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="phone">
+          <i class="fa fa-phone" aria-hidden="true">0414.324.63.96</i>
+          <p>Carlos Colmenares A.</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="Grid_titles">
+        <h1 class="titulo">Javascript Learning</h1>
+        <h2 class="clase">Seriado: #9</h2>
+        <ol class="contenido">
+          <li>Dibujar canvas con las flechas del teclado</li>
+          <li>Detectar eventos del teclado</li>
+          <li>getElementByID, addEventListener</li>
+          <li>Condicionales IF/ELSE y SWITCH</li>
+          <li>Creación y manejo de objetos JSON</li>
+          <li>Ejemplos comentados de otras alternativas</li>
+        </ol>
+      </div>
+
+      <!--: Área de desarrollo para la clase del día -->
+      <section>
+        <div id="box" class="box">
+          <h3>Canvas</h3>
+          <!--* Rutina para obtener, vía web, el ancho y alto del lienzo del CANVAS -->
+          <!-- <div class="content">
+            <p>
+              Ingrese<br />
+              Ancho:
+              <input type="text" id="ancho" /><br />
+              Alto:
+              <input type="text" id="alto" /><br />
+              <input type="button" value="enter" id="btn" />
+            </p>
+          </div> -->
+          <canvas id="area_de_dibujo" width="600" , height="250"></canvas>
+          <p>Mueve las flechas del teclado para dibujar</p>
+        </div>
+      </section>
+    </main>
+
+    <script defer src="assets/js/app.js"></script>
+  </body>
+</html>
