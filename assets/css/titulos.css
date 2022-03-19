@@ -1,0 +1,157 @@
+/*: Estilos Generales */
+:root {
+  --color-logo: #9d8d6c;
+  --color-background: #000;
+  --font-header: "Times New Roman", cursive;
+
+  --step--2: clamp(0.69rem, 0.65rem + 0.21vw, 0.8rem);
+  --step--1: clamp(0.83rem, 0.77rem + 0.33vw, 1rem);
+  --step-0: clamp(1rem, 0.9rem + 0.49vw, 1.25rem);
+  --step-5: clamp(2.49rem, 1.97rem + 2.59vw, 3.82rem);
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  --color-main: #ff4c00;
+  --color-text: #fff;
+  --color-title: aqua;
+  --color-background: #000;
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+li {
+  font-size: var(--step-0);
+}
+main {
+  width: 100%;
+  min-height: 100vh;
+  margin: 5.75rem auto 0;
+  background: var(--color-background);
+  color: var(--color-main);
+  text-align: center;
+}
+.Grid_titles {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 3.125em;
+  justify-content: space-between;
+  align-items: center;
+  display: grid;
+  grid-template-areas: "titulo clase contenido";
+  grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+}
+.titulo {
+  grid-area: titulo;
+  justify-self: center;
+  align-self: center;
+  padding: 0;
+}
+.clase {
+  grid-area: clase;
+  justify-self: center;
+  align-self: center;
+  padding: 0;
+  color: var(--color-title);
+}
+.contenido {
+  grid-area: contenido;
+  justify-self: center;
+  align-self: center;
+  text-align: left;
+  padding: 0;
+}
+.contenido li {
+  color: white;
+  font-size: var(--step--1);
+  line-height: 1.5em;
+  padding: 0 0.031em;
+}
+.contenido li:nth-child(1) {
+  margin-top: 0.625em;
+}
+.box {
+  position: relative;
+  margin: 1.875em auto 0;
+  padding: 1.25em 0;
+  width: 70%;
+  min-height: 100%;
+  border-radius: 0.31em;
+  color: var(--color-text);
+  border: 0.1px solid var(--color-text);
+}
+
+/*: Estilos del modo responsive */
+@media screen and (max-width: 992px) {
+  main {
+    padding-top: 5rem;
+  }
+
+  .Grid_titles {
+    width: 100%;
+    padding: 0.625em 0.625em;
+    justify-content: space-between;
+    grid-template-areas:
+      "titulo . clase"
+      ". contenido .";
+    grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+  }
+  .titulo {
+    margin-top: 1.25em;
+  }
+  .clase {
+    padding: 0 1.25em;
+  }
+  .contenido {
+    padding: 0 1.25em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Grid_titles {
+    justify-content: space-evenly;
+  }
+  .titulo {
+    padding: 1.25rem 0;
+  }
+  .clase {
+    padding: 1.25rem 0;
+  }
+  .contenido {
+    width: 100%;
+    padding-top: var(--step-5);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Grid_titles {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .titulo {
+    padding: 0 0 1rem 0;
+  }
+  .clase {
+    padding: 0 0 1rem 0;
+  }
+  .contenido {
+    padding: 0;
+  }
+}
